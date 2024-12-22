@@ -3,7 +3,10 @@ class Assets {
   Assets._();
 
   static const String iconsBag = 'assets/icons/bag.png';
+  static const String iconsCard = 'assets/icons/card.png';
+  static const String iconsChoise = 'assets/icons/choise.png';
   static const String iconsFlutter = 'assets/icons/flutter.png';
+  static const String iconsGuide = 'assets/icons/guide.png';
   static const String iconsLocation = 'assets/icons/location.png';
   static const String iconsNetwork = 'assets/icons/network.png';
   static const String iconsPlay = 'assets/icons/play.png';
@@ -12,5 +15,10 @@ class Assets {
   static const String imagesTravelTicket = 'assets/images/travel_ticket.png';
   static const String imagesWorldmap = 'assets/images/worldmap.png';
   static const String imagesWorldmap1 = 'assets/images/worldmap1.png';
+  static const String logosAirbnb = 'assets/logos/airbnb.png';
+  static const String logosBooking = 'assets/logos/booking.png';
+  static const String logosExpedia = 'assets/logos/expedia.png';
+  static const String logosRbitz = 'assets/logos/rbitz.png';
+  static const String logosTripadvisor = 'assets/logos/tripadvisor.png';
 
 }

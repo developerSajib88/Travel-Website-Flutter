@@ -2,6 +2,8 @@ import 'package:feature_first/app/app.dart';
 import 'package:feature_first/common/widgets/buttons/hover_button.dart';
 import 'package:feature_first/common/widgets/buttons/hover_text_button.dart';
 import 'package:feature_first/common/widgets/buttons/primary_buttons.dart';
+import 'package:feature_first/features/landing_page/widget/auto_scrolling_logo.dart';
+import 'package:feature_first/features/landing_page/widget/destination_slider.dart';
 import 'package:feature_first/generated/assets.dart';
 import 'package:feature_first/utils/utils.dart';
 import 'package:flutter/gestures.dart';
@@ -24,7 +26,7 @@ class LandingPage extends StatelessWidget {
         child: Container(
           width: 1.sw,
           height: 1.sh,
-          padding: EdgeInsets.symmetric(vertical: 20.h,horizontal: 200.w),
+          padding: EdgeInsets.fromLTRB(200.w, 20.h, 200.w, 0),
           child: Column(
             crossAxisAlignment: crossStart,
             children: [
@@ -133,11 +135,12 @@ class LandingPage extends StatelessWidget {
                                       children: [
                                         Text(
                                           "Explore the world!",
-                                          style: CustomTextStyles.titleTextStyles.copyWith(
-                                              color: ColorPalates.pink
-                                          ),
+                                          style: CustomTextStyles
+                                              .titleTextStyles
+                                              .copyWith(
+                                                  color: ColorPalates.pink,
+                                                  fontSize: 12.sp),
                                         ),
-
                                         gap6,
 
                                         Image.asset(
@@ -427,10 +430,149 @@ class LandingPage extends StatelessWidget {
                       ),
 
 
+                      gap24,
 
-                      gap48,
-                      gap48,
-                      gap48
+                      const AutoScrollingLogos(),
+                      
+                      
+                      gap56,
+                      
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+
+                          SizedBox(
+                            width: 180.w,
+                            child: Column(
+                              crossAxisAlignment: crossStart,
+                              children: [
+
+                               Text(
+                                 "WE ARE SERVE",
+                                 style: CustomTextStyles.titleTextStyles.copyWith(
+                                   color: Colors.pink
+                                 ),
+                               ),
+
+                                Text(
+                                  "Top Values For You",
+                                  style: CustomTextStyles.titleTextStyles.copyWith(
+                                    fontSize: 30.sp
+                                  ),
+                                ),
+
+                                gap14,
+
+                                Text(
+                                  "Embrace life's vastness, venture forth,",
+                                  style: CustomTextStyles.descriptionTextStyles,
+                                ),
+
+
+                              ],
+                            ),
+                          ),
+
+                          SizedBox(
+                            width: 180.w,
+                            child: Column(
+                              crossAxisAlignment: crossStart,
+                              children: [
+
+                                Image.asset(
+                                  Assets.iconsChoise,
+                                  width: 70.w,
+                                  height: 70.h,
+                                  fit: BoxFit.fitWidth,
+                                ),
+
+                                gap12,
+
+                                Text(
+                                    "Lot of choices",
+                                  style: CustomTextStyles.titleTextStyles,
+                                ),
+
+                                gap12,
+
+                                Text(
+                                  "Embrace life's vastness, venture forth,",
+                                  style: CustomTextStyles.descriptionTextStyles,
+                                ),
+
+
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            width: 180.w,
+                            child: Column(
+                              crossAxisAlignment: crossStart,
+                              children: [
+
+                                Image.asset(
+                                  Assets.iconsGuide,
+                                  width: 70.w,
+                                  height: 70.h,
+                                ),
+
+                                gap12,
+
+                                Text(
+                                  "Best Tour Guide",
+                                  style: CustomTextStyles.titleTextStyles,
+                                ),
+
+                                gap12,
+
+                                Text(
+                                  "Embrace life's vastness, venture forth,",
+                                  style: CustomTextStyles.descriptionTextStyles,
+                                ),
+
+
+                              ],
+                            ),
+                          ),
+
+
+                          SizedBox(
+                            width: 180.w,
+                            child: Column(
+                              crossAxisAlignment: crossStart,
+                              children: [
+
+                                Image.asset(
+                                  Assets.iconsCard,
+                                  width: 70.w,
+                                  height: 70.h,
+                                ),
+
+                                gap12,
+
+                                Text(
+                                  "Easy Booking",
+                                  style: CustomTextStyles.titleTextStyles,
+                                ),
+
+                                gap12,
+
+                                Text(
+                                  "Embrace life's vastness, venture forth,",
+                                  style: CustomTextStyles.descriptionTextStyles,
+                                ),
+
+
+                              ],
+                            ),
+                          ),
+                          
+                        ],
+                      ),
+
+                      gap56,
+                      
+                      const DestinationSlider()
 
 
                     ],

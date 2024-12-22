@@ -25,7 +25,7 @@ class CustomTextStyles {
   );
 
   static TextStyle titleTextStyles = GoogleFonts.poppins(
-      fontSize: 12.sp,
+      fontSize: 16.sp,
       color: ColorPalates.primaryColor,
       fontWeight: FontWeight.bold
   );
