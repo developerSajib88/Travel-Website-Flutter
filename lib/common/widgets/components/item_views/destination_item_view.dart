@@ -1,10 +1,21 @@
-import 'package:feature_first/common/widgets/buttons/hover_button.dart';
-import 'package:feature_first/data/model/destination/slider_destination.dart';
 import 'package:feature_first/utils/utils.dart';
 import 'package:flutter/material.dart';
 
 class DestinationItemView extends StatelessWidget {
-  const DestinationItemView({super.key});
+
+  final String image;
+  final String title;
+  final String location;
+  final String description;
+  final String price;
+
+  const DestinationItemView({super.key,
+    required this.image,
+    required this.title,
+    required this.location,
+    required this.description,
+    required this.price
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +39,7 @@ class DestinationItemView extends StatelessWidget {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(40.r),
               child: Image.network(
-                "assets/destination/destination_1.jpg",
+                image,
                 width: 1.sw,
                 fit: BoxFit.cover,
               ),
@@ -38,14 +49,14 @@ class DestinationItemView extends StatelessWidget {
           gap12,
 
           Text(
-            destination.first["title"],
+            title,
             style: CustomTextStyles.titleTextStyles,
           ),
 
           gap12,
 
           Text(
-            destination.first["description"] ?? "",
+            description,
             style: CustomTextStyles.descriptionTextStyles,
           ),
 
@@ -70,7 +81,7 @@ class DestinationItemView extends StatelessWidget {
                   mainAxisAlignment: mainCenter,
                   children: [
                     Text(
-                      "Machu Picchu, Peru",
+                      location,
                       style: CustomTextStyles.descriptionTextStyles.copyWith(
                         fontSize: 12.sp,
                         color: ColorPalates.customGrey
@@ -82,9 +93,11 @@ class DestinationItemView extends StatelessWidget {
                       children: [
 
                         Text(
-                          "\$360",
+                         price,
                           style: CustomTextStyles.titleTextStyles,
                         ),
+
+                        gap4,
 
                         Text(
                           "x 12 interest free",

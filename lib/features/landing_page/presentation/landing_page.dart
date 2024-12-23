@@ -572,7 +572,7 @@ class LandingPage extends StatelessWidget {
 
                       gap56,
                       
-                      const DestinationSlider(),
+                      DestinationSlider(),
 
 
 
