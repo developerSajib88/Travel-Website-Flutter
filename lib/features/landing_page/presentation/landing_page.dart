@@ -9,20 +9,30 @@ import 'package:feature_first/utils/utils.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 
-class LandingPage extends StatelessWidget {
+class LandingPage extends HookWidget {
   static String get path => "/landingPage";
   static String get name => "landingPage";
-  LandingPage({super.key});
-
-  ScrollController controller = ScrollController();
+  const LandingPage({super.key});
 
 
   @override
   Widget build(BuildContext context) {
+
+    ScrollController scrollController = useScrollController();
+    final maxExtent = useState<bool>(false);
+
+    useEffect((){
+      scrollController.addListener((){
+        maxExtent.value = scrollController.offset >= scrollController.position.maxScrollExtent ;
+      });
+      return null;
+    },[]);
+
     return Scaffold(
       body: Scrollbar(
-        controller: controller,
+        controller: scrollController,
         child: Container(
           width: 1.sw,
           height: 1.sh,
@@ -97,7 +107,7 @@ class LandingPage extends StatelessWidget {
                 child: ScrollConfiguration(
                   behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
                   child: ListView(
-                    controller: controller,
+                    controller: scrollController,
                     children: [
 
                       Stack(
@@ -572,7 +582,7 @@ class LandingPage extends StatelessWidget {
 
                       gap56,
                       
-                      DestinationSlider(),
+                      const DestinationSlider(),
 
 
 
@@ -586,6 +596,45 @@ class LandingPage extends StatelessWidget {
 
 
             ],
+          ),
+        ),
+      ),
+      floatingActionButton: Container(
+        width: 45.w,
+        height: 45.w,
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+            color: ColorPalates.purple,
+            shape: BoxShape.circle,
+            boxShadow: primaryShadow
+        ),
+        child: Material(
+          color: Colors.transparent,
+          child: SizedBox(
+            width: 45.w,
+            height: 45.w,
+            child: InkWell(
+                onTap: (){
+                  Future.microtask((){
+                    scrollController.animateTo(
+                      scrollController.offset >= scrollController.position.maxScrollExtent ?
+                      scrollController.position.minScrollExtent :
+                      scrollController.position.maxScrollExtent,
+                      duration: const Duration(milliseconds: 100),
+                      curve: Curves.easeInOut,
+                    );
+                  });
+                },
+                borderRadius: radiusCircle,
+                hoverColor: ColorPalates.pink,
+                child: Icon(
+                  maxExtent.value ?
+                  Icons.keyboard_arrow_up :
+                  Icons.keyboard_arrow_down,
+                  size: 30.sp,
+                  color: Colors.white,
+                )
+            ),
           ),
         ),
       ),
