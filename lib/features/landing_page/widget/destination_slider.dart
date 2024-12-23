@@ -1,5 +1,6 @@
 import 'package:feature_first/app/app.dart';
 import 'package:feature_first/common/widgets/buttons/hover_button.dart';
+import 'package:feature_first/common/widgets/components/item_views/destination_item_view.dart';
 import 'package:feature_first/utils/constants/ui_constants.dart';
 import 'package:feature_first/utils/styles/color_palates.dart';
 import 'package:feature_first/utils/styles/custom_text_styles.dart';
@@ -104,11 +105,21 @@ class DestinationSlider extends StatelessWidget {
 
 
                 ],
-              )
+              ),
 
 
             ],
+          ),
+
+          gap24,
+
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: List.generate(15, (index)=> DestinationItemView()),
+            ),
           )
+
         ],
       ),
     );
