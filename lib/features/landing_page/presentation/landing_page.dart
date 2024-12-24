@@ -584,7 +584,7 @@ class LandingPage extends HookWidget {
 
                       gap56,
 
-                      ServicesHistory()
+                      const ServicesHistory()
 
 
 
