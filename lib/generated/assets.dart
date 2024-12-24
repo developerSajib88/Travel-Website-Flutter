@@ -2,9 +2,9 @@
 class Assets {
   Assets._();
 
-  static const String desinationDestination1 = 'assets/desination/destination_1.jpg';
-  static const String desinationDestination2 = 'assets/desination/destination_2.png';
-  static const String desinationDestination3 = 'assets/desination/destination_3.png';
+  static const String destinationDestination1 = 'assets/destination/destination_1.jpg';
+  static const String destinationDestination2 = 'assets/destination/destination_2.png';
+  static const String destinationDestination3 = 'assets/destination/destination_3.png';
   static const String iconsBag = 'assets/icons/bag.png';
   static const String iconsCard = 'assets/icons/card.png';
   static const String iconsChoise = 'assets/icons/choise.png';

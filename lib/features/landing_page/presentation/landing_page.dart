@@ -1,12 +1,10 @@
-import 'package:feature_first/app/app.dart';
 import 'package:feature_first/common/widgets/buttons/hover_button.dart';
 import 'package:feature_first/common/widgets/buttons/hover_text_button.dart';
-import 'package:feature_first/common/widgets/buttons/primary_buttons.dart';
 import 'package:feature_first/features/landing_page/widget/auto_scrolling_logo.dart';
 import 'package:feature_first/features/landing_page/widget/destination_slider.dart';
+import 'package:feature_first/features/landing_page/widget/services_history.dart';
 import 'package:feature_first/generated/assets.dart';
 import 'package:feature_first/utils/utils.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -584,9 +582,10 @@ class LandingPage extends HookWidget {
                       
                       const DestinationSlider(),
 
-
-
                       gap56,
+
+                      ServicesHistory()
+
 
 
                     ],
