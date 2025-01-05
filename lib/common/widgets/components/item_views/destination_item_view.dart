@@ -1,5 +1,6 @@
 import 'package:feature_first/utils/utils.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class DestinationItemView extends StatelessWidget {
 
@@ -8,42 +9,82 @@ class DestinationItemView extends StatelessWidget {
   final String location;
   final String description;
   final String price;
+  final EdgeInsetsDirectional? padding;
 
   const DestinationItemView({super.key,
     required this.image,
     required this.title,
     required this.location,
     required this.description,
-    required this.price
+    required this.price,
+    this.padding,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: 320.w,
-      padding: paddingRight24,
+      padding: padding ?? paddingRight24,
       child: Column(
         crossAxisAlignment: crossStart,
         children: [
-          Container(
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(40.r),
-              boxShadow: [
-                BoxShadow(
-                  blurRadius: 10,
-                  color: Colors.grey.withOpacity(0.5),
-                  offset: Offset(0, 10)
-                )
-              ]
-            ),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(40.r),
-              child: Image.network(
-                image,
-                width: 1.sw,
-                fit: BoxFit.cover,
+          Stack(
+            children: [
+
+              Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(40.r),
+                  boxShadow: [
+                    BoxShadow(
+                      blurRadius: 10,
+                      color: Colors.grey.withOpacity(0.5),
+                      offset: Offset(0, 10)
+                    )
+                  ]
+                ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(40.r),
+                  child: Image.network(
+                    image,
+                    width: 1.sw,
+                    fit: BoxFit.cover,
+                  ),
+                ),
               ),
-            ),
+
+              Positioned(
+                  right: 20,
+                  top: 10,
+                  child: Container(
+                    width: 50.w,
+                    height: 35.h,
+                    decoration: BoxDecoration(
+                      color: const Color(0xff0C111F).withOpacity(0.5),
+                      borderRadius: radiusCircle,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: mainSpaceEven,
+                      children: [
+
+                        Icon(
+                          FontAwesomeIcons.solidStar,
+                          color: Colors.deepOrange,
+                          size: 10.sp,
+                        ),
+
+                        Text(
+                          "5.0",
+                          style: CustomTextStyles.secondaryTextStyles.copyWith(
+                            color: Colors.white
+                          ),
+                        )
+
+                      ],
+                    ),
+                  )
+              )
+
+            ],
           ),
 
           gap12,
