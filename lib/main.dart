@@ -5,7 +5,6 @@ import 'package:flutter/services.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:feature_first/core/dependency_injection/dependency_injection.dart' as di;
-
 import 'data/local_database/key_local_database.dart';
 
 void main()async{
