@@ -15,6 +15,8 @@ class Assets {
   static const String iconsPlay = 'assets/icons/play.png';
   static const String imagesFlutter = 'assets/images/flutter.png';
   static const String imagesPreviewImg = 'assets/images/preview_img.png';
+  static const String imagesPreviewImg2 = 'assets/images/preview_img_2.png';
+  static const String imagesPreviewImg3 = 'assets/images/preview_img_3.png';
   static const String imagesTravelTicket = 'assets/images/travel_ticket.png';
   static const String imagesWorldmap = 'assets/images/worldmap.png';
   static const String imagesWorldmap1 = 'assets/images/worldmap1.png';

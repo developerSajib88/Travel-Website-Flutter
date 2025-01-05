@@ -6,8 +6,10 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 class AnimatedCounter extends HookWidget {
   final int value;
   final String? concreateText;
+  final double? fonSize;
   const AnimatedCounter({
     super.key,
+    this.fonSize,
     this.concreateText,
     required this.value,
   });
@@ -36,7 +38,7 @@ class AnimatedCounter extends HookWidget {
       counter.value.toString() + (concreateText ?? ""),
       style: CustomTextStyles.primaryTextStyles.copyWith(
           color: Colors.pink,
-          fontSize: 18.sp
+          fontSize: fonSize ?? 18.sp
       ),
     );
   }
