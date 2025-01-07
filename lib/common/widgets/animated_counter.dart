@@ -23,7 +23,7 @@ class AnimatedCounter extends HookWidget {
       Future.delayed(const Duration(seconds: 1), () {
         for (int i = 1; i <= value; i++) {
           Future.delayed(Duration(milliseconds: i * 1), () {
-            counter.value = i;
+            Future.microtask(()=> counter.value = i);
           });
         }
       });

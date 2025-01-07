@@ -17,6 +17,8 @@ class Assets {
   static const String iconsPlay = 'assets/icons/play.png';
   static const String iconsThumbIc = 'assets/icons/thumb_ic.png';
   static const String imagesFlutter = 'assets/images/flutter.png';
+  static const String imagesNewsletterDraw1 = 'assets/images/newsletter_draw_1.png';
+  static const String imagesNewsletterDraw2 = 'assets/images/newsletter_draw_2.png';
   static const String imagesPreviewImg = 'assets/images/preview_img.png';
   static const String imagesPreviewImg2 = 'assets/images/preview_img_2.png';
   static const String imagesPreviewImg3 = 'assets/images/preview_img_3.png';
