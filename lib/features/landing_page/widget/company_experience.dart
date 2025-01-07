@@ -144,7 +144,7 @@ class CompanyExperience extends StatelessWidget {
                 Image.asset(
                   Assets.imagesPreviewImg3,
                   width: 550.w,
-                  height: 400.w,
+                  height: 480.w,
                   fit: BoxFit.fitWidth,
                 ),
 

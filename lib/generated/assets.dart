@@ -8,11 +8,14 @@ class Assets {
   static const String iconsBag = 'assets/icons/bag.png';
   static const String iconsCard = 'assets/icons/card.png';
   static const String iconsChoise = 'assets/icons/choise.png';
+  static const String iconsDedicationIc = 'assets/icons/dedication_ic.png';
   static const String iconsFlutter = 'assets/icons/flutter.png';
   static const String iconsGuide = 'assets/icons/guide.png';
+  static const String iconsHeartIc = 'assets/icons/heart_ic.png';
   static const String iconsLocation = 'assets/icons/location.png';
   static const String iconsNetwork = 'assets/icons/network.png';
   static const String iconsPlay = 'assets/icons/play.png';
+  static const String iconsThumbIc = 'assets/icons/thumb_ic.png';
   static const String imagesFlutter = 'assets/images/flutter.png';
   static const String imagesPreviewImg = 'assets/images/preview_img.png';
   static const String imagesPreviewImg2 = 'assets/images/preview_img_2.png';
