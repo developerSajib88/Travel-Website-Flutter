@@ -5,6 +5,9 @@ class Assets {
   static const String destinationDestination1 = 'assets/destination/destination_1.jpg';
   static const String destinationDestination2 = 'assets/destination/destination_2.png';
   static const String destinationDestination3 = 'assets/destination/destination_3.png';
+  static const String destinationDestination4 = 'assets/destination/destination_4.png';
+  static const String destinationDestination5 = 'assets/destination/destination_5.png';
+  static const String destinationDestination6 = 'assets/destination/destination_6.png';
   static const String iconsBag = 'assets/icons/bag.png';
   static const String iconsCard = 'assets/icons/card.png';
   static const String iconsChoise = 'assets/icons/choise.png';

@@ -75,7 +75,7 @@ class TopDestinations extends StatelessWidget {
         gap12,
 
         Wrap(
-          children: destination.sublist(0,6).map((destination)=>
+          children: destination.reversed.toList().map((destination)=>
               DestinationItemView(
                 padding: EdgeInsetsDirectional.fromSTEB(0, 20.h, 30.w, 30.w),
                 price: destination["price"],
