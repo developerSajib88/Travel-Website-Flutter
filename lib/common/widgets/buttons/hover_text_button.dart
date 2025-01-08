@@ -5,8 +5,12 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 
 class HoverTextButton extends HookWidget {
   final String text;
+  final Color? enableTextColor;
+  final FontWeight? fontWeight;
   const HoverTextButton({
     super.key,
+    this.enableTextColor,
+    this.fontWeight,
     required this.text,
   });
 
@@ -24,9 +28,9 @@ class HoverTextButton extends HookWidget {
         child: Text(
           text,
           style: TextStyle(
-            color: isHovering.value ? ColorPalates.pink : ColorPalates.primaryColor,
+            color: isHovering.value ? ColorPalates.pink : enableTextColor ?? ColorPalates.primaryColor,
             fontSize: 14.sp,
-            fontWeight: isHovering.value ? FontWeight.w900 : FontWeight.w800,
+            fontWeight: isHovering.value ? FontWeight.w900 : fontWeight ?? FontWeight.w800,
           ),
         ),
       ),

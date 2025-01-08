@@ -3,6 +3,7 @@ import 'package:feature_first/common/widgets/buttons/hover_text_button.dart';
 import 'package:feature_first/features/landing_page/widget/auto_scrolling_logo.dart';
 import 'package:feature_first/features/landing_page/widget/company_experience.dart';
 import 'package:feature_first/features/landing_page/widget/destination_slider.dart';
+import 'package:feature_first/features/landing_page/widget/footer.dart';
 import 'package:feature_first/features/landing_page/widget/newsletter.dart';
 import 'package:feature_first/features/landing_page/widget/services_history.dart';
 import 'package:feature_first/features/landing_page/widget/top_destinations.dart';
@@ -618,6 +619,11 @@ class LandingPage extends HookWidget {
                       ),
 
                       const Divider(),
+
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(200.w, 20.h, 200.w, 0),
+                        child: const Footer(),
+                      )
 
                     ],
                   ),
