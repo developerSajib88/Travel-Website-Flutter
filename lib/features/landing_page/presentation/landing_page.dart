@@ -25,10 +25,12 @@ class LandingPage extends HookWidget {
 
     ScrollController scrollController = useScrollController();
     final maxExtent = useState<bool>(false);
+    final scrollDown = useState<bool>(false);
 
     useEffect((){
       scrollController.addListener((){
-        maxExtent.value = scrollController.offset >= scrollController.position.maxScrollExtent ;
+        maxExtent.value = scrollController.offset >= scrollController.position.maxScrollExtent;
+        scrollDown.value = scrollController.offset > scrollController.position.minScrollExtent;
       });
       return null;
     },[]);
@@ -36,7 +38,7 @@ class LandingPage extends HookWidget {
     return Scaffold(
       body: Scrollbar(
         controller: scrollController,
-        child: Container(
+        child: SizedBox(
           width: 1.sw,
           height: 1.sh,
           child: Column(
@@ -44,8 +46,13 @@ class LandingPage extends HookWidget {
             children: [
 
 
-              Padding(
-                padding: EdgeInsets.fromLTRB(200.w, 20.h, 200.w, 0),
+              Container(
+                width: 1.sw,
+                padding: EdgeInsets.fromLTRB(200.w, 20.h, 200.w, 20.h),
+                decoration: scrollDown.value ? BoxDecoration(
+                  color: ColorPalates.defaultWhite,
+                  boxShadow: primaryShadow
+                ): null,
                 child: Row(
                   crossAxisAlignment: crossCenter,
                   children: [
@@ -108,6 +115,7 @@ class LandingPage extends HookWidget {
                   ],
                 ),
               ),
+
 
               Expanded(
                 child: ScrollConfiguration(

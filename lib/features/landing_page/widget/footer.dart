@@ -407,11 +407,10 @@ class Footer extends StatelessWidget {
                 ),
               ),
 
-
-              gap12
-
             ],
-          )
+          ),
+
+          gap24
 
         ],
       ),
